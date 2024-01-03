@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    int A;
+    std::cout << "Enter an integer A: ";
+    std::cin >> A;
+
+    for (int B = 1; B <= A; ++B) {
+        if (A % (B * B) == 0 && A % (B * B * B) != 0) {
+            std::cout << B << " ";
+        }
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+}
