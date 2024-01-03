@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    int number;
+    std::cout << "Enter an integer: ";
+    std::cin >> number;
+
+    std::string result;
+
+    while (number != 0) {
+        int digit = number % 10;
+        if (digit != 3 && digit != 6) {
+            result = std::to_string(digit) + result;
+        }
+        number /= 10;
+    }
+
+    std::cout << "Number after removing 3 and 6: " << result << std::endl;
+
+    return 0;
+}
