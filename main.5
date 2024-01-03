@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int A;
+    std::cout << "Enter an integer A: ";
+    std::cin >> A;
+
+    int sum = 0;
+    int originalA = A;
+
+    while (A != 0) {
+        sum += A % 10;
+        A /= 10;
+    }
+
+    if (sum * sum * sum == originalA * originalA) {
+        std::cout << "Cube of the sum of digits equals A*A." << std::endl;
+    } else {
+        std::cout << "Cube of the sum of digits does not equal A*A." << std::endl;
+    }
+
+    return 0;
+}
